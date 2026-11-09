@@ -34,7 +34,7 @@ check("no staff UI or scripts in customer index/SW/app", () => {
   assert.ok(!/staffEntry|staff-fab|staff-hallmarks|hallmarks-data|artists-seed-data/i.test(html));
   assert.ok(!/<script[^>]+staff/i.test(html));
   assert.ok(!/hallmarks-data|artists-seed-data|staff-hallmarks|artists\.seed\.json/i.test(sw));
-  assert.ok(/ena-v1-2026-11-09-voice-simple-i/.test(sw));
+  assert.ok(/ena-v1-2026-11-09-kiosk-a/.test(sw));
   assert.ok(!/ENA_STAFF|staffEntry|staff-fab|renderStaff/i.test(app));
   assert.ok(!/staff-fab|staff-mode/i.test(css));
 });
@@ -157,7 +157,7 @@ check("video player uses local path with coming-soon fallback", () => {
   assert.ok(/playsinline/.test(app));
   assert.ok(!/<video[^>]+src=["']https?:/i.test(app));
   const sw = fs.readFileSync(path.join(root, "sw.js"), "utf8");
-  assert.ok(/ena-v1-2026-11-09-voice-simple-i/.test(sw));
+  assert.ok(/ena-v1-2026-11-09-kiosk-a/.test(sw));
   assert.ok(sw.includes("jewelry-hero.webp"));
   assert.ok(!/assets\/videos\/.*\.mp4/.test(sw) || /NOT precached/i.test(sw));
   assert.ok(/mp4\|webm\|mov/.test(sw));
@@ -187,7 +187,7 @@ check("brand logo present locally with no hotlink", () => {
   assert.ok(app.includes("./assets/brand/tanner-trading-logo-home.webp"));
   assert.ok(!/src=["']https?:\/\/tannertrading\.com/i.test(html));
   const sw = fs.readFileSync(path.join(root, "sw.js"), "utf8");
-  assert.ok(/ena-v1-2026-11-09-voice-simple-i/.test(sw));
+  assert.ok(/ena-v1-2026-11-09-kiosk-a/.test(sw));
   assert.ok(sw.includes("tanner-trading-logo-header.webp"));
 });
 
@@ -231,7 +231,7 @@ check("visitor shows three pillars only; title updated; home badge removed", () 
   assert.ok(/epigraph/.test(home));
   assert.ok(/meta\.location/.test(home));
   const gal = app.match(/function renderGallery\(art\) \{[\s\S]*?\n  \}/)[0];
-  assert.ok(/exhibit-badge/.test(gal));
+  assert.ok(!/exhibit-badge/.test(gal) && !/Sources &amp; credits/.test(home));
   const readiness = fs.readFileSync(path.join(root, "READINESS.md"), "utf8");
   assert.ok(/cultural review/i.test(readiness));
 });

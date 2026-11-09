@@ -1,5 +1,5 @@
 /* Explore Native Art — offline cache after first secure (HTTPS) load */
-const CACHE = "ena-v1-2026-11-09-voice-simple-i";
+const CACHE = "ena-v1-2026-11-09-kiosk-a";
 const ASSETS = [
   "./",
   "./index.html",

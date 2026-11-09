@@ -406,9 +406,7 @@
       '">' +
       cards +
       "</div>" +
-      '<div class="home-actions">' +
-      '<button type="button" class="btn btn-block" data-go="sources">Sources &amp; credits</button>' +
-      "</div>"
+      ""
     );
   }
 
@@ -421,9 +419,6 @@
       '<div class="gallery-page gallery-page-simple">' +
       '<div class="footer-bar gallery-nav">' +
       '<button type="button" class="btn" data-go="home">← Home</button>' +
-      "</div>" +
-      '<div class="exhibit-badge">' +
-      escapeHtml(C.meta.exhibitLabel || C.meta.reviewStatus) +
       "</div>" +
       '<p class="gallery-kicker">Learn</p>' +
       '<h2 class="gallery-title">' +

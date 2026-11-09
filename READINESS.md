@@ -73,3 +73,6 @@ Intro films in `assets/videos/*.mp4` are **not** added to the service-worker pre
 ## Sandpainting floor photo (cultural review)
 
 Joe supplied a photograph of a commercial sandpainting on board (hand pointing at the work). It is captioned neutrally as “Sandpainting on board” with credit “Photograph: Tanner Trading.” The gallery still carries the sacred/commercial respect note. A cultural reviewer should confirm this specific image is appropriate before floor use. Do not treat it as a ceremonial sandpainting.
+
+## Update 2026-11-09
+Joe confirmed cultural review was completed in-house (Nov 9, 2026). Tanner Trading is the source material; public Sources & credits page and gallery review badge removed.
